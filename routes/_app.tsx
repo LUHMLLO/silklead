@@ -7,7 +7,7 @@ import {
   props,
   reset,
   tokens,
-} from "jsr:@luhmllo/lilycat@0.1.19";
+} from "jsr:@luhmllo/lilycat@0.1.20";
 import Appbar from "#islands/Appbar.tsx";
 import PaneNotifications from "#islands/NotificationsPane.tsx";
 
@@ -71,9 +71,9 @@ export default function App({ Component, url }: PageProps) {
         <main id="app">
           <Appbar />
           <Component />
-          <x-overlay>
+          <x-surlayer>
             <PaneNotifications />
-          </x-overlay>
+          </x-surlayer>
         </main>
         <script type="module" src={asset("/vendors/dropdown.min.js")} />
       </body>
