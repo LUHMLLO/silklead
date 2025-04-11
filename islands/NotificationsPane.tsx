@@ -16,14 +16,23 @@ export default function NotificationsPane() {
         </button>
       </div>
 
-      <label htmlFor="searchbar">
-        <i className="icon">search</i>
+      <label
+        htmlFor="searchbar"
+        data-props="--input"
+        style="background-color: var(--clr-primary); border-radius: 0;"
+      >
+        <i class="icon">
+          search
+        </i>
         <input
           type="text"
-          className="w-full"
+          className="rounded-none w-full"
           name="searchbar"
           placeholder="Type in to filter list"
         />
+        <i class="icon">
+          keyboard_command_key
+        </i>
       </label>
     </aside>
   );
