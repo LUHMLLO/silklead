@@ -1,4 +1,6 @@
 :root {
+  --clr-text: light-dark(#0d0d0d, #f2f2f2);
+  --clr-background: light-dark(#f2f2f2, #0d0d0d);
   --clr-accent: hsl(118, 34.80%, 54.90%);
 }
 
@@ -12,7 +14,7 @@ html {
 
 #app__topbar {
   align-items: center;
-  border-bottom: solid 1px hsl(from var(--clr-background) h s calc(l + 5));
+  border-bottom: solid 2px hsl(from var(--clr-background) h s calc(l + 5));
   gap: var(--md, 15px);
   grid-column: expand;
   height: 50px;
@@ -43,7 +45,7 @@ html {
 
   :where(hr) {
     height: 100%;
-    width: 1px;
+    width: 2px;
   }
 
   :where(#menu) {
@@ -57,7 +59,7 @@ html {
     }
 
     & > hr {
-      height: 1px;
+      height: 2px;
       width: 100%;
     }
   }
@@ -67,7 +69,7 @@ html {
   background-color: var(--clr-background);
   height: 100dvh;
   inset: 0 0 auto auto;
-  outline: solid 1px hsl(from var(--clr-background) h s calc(l + 5));
+  border: solid 2px hsl(from var(--clr-background) h s calc(l + 5));
   position: fixed;
   width: min(100%, 440px);
 

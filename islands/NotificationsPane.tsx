@@ -5,7 +5,7 @@ export default function NotificationsPane() {
 
   return (
     <aside id="pane_notifications" className="pane">
-      <div className="place-items-center flex h-[50px] gap-xs px-md">
+      <div className="place-items-center flex h-[50px] gap-xs px-sm">
         <p>Notifications</p>
         <button
           className="contents"
@@ -19,7 +19,7 @@ export default function NotificationsPane() {
       <label
         htmlFor="searchbar"
         data-props="--input"
-        style="border-radius: 0;"
+        style="border-radius: 0; margin-inline: -2px;"
       >
         <i class="icon">
           search
