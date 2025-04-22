@@ -1,6 +1,4 @@
 :root {
-  --clr-background: hsl(0deg, 0%, 5%);
-  --clr-text: hsl(0deg, 0%, 95%);
   --clr-accent: hsl(118, 34.80%, 54.90%);
 }
 
@@ -8,13 +6,18 @@ html {
   font-family: "Figtree", sans-serif;
 }
 
-#appBar {
+#app {
+  grid-template-rows: max-content 1fr;
+}
+
+#app__topbar {
   align-items: center;
   border-bottom: solid 1px hsl(from var(--clr-background) h s calc(l + 5));
   gap: var(--md, 15px);
+  grid-column: expand;
   height: 50px;
+  overflow: clip;
   padding: 0 var(--md, 15px);
-  white-space: nowrap;
 
   & > * {
     align-items: inherit;
@@ -70,5 +73,15 @@ html {
 
   :where(.icon:hover) {
     --opsz: 25;
+  }
+}
+
+#app__content {
+  display: grid;
+  grid-column: expand;
+  grid-template-columns: subgrid;
+
+  & > * {
+    grid-column: inner;
   }
 }

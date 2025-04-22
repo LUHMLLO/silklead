@@ -19,14 +19,14 @@ export default function NotificationsPane() {
       <label
         htmlFor="searchbar"
         data-props="--input"
-        style="background-color: var(--clr-primary); border-radius: 0;"
+        style="border-radius: 0;"
       >
         <i class="icon">
           search
         </i>
         <input
           type="text"
-          className="rounded-none w-full"
+          className="rounded-none"
           name="searchbar"
           placeholder="Type in to filter list"
         />

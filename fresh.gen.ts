@@ -5,7 +5,7 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $index from "./routes/index.tsx";
-import * as $Appbar from "./islands/Appbar.tsx";
+import * as $AppTopbar from "./islands/AppTopbar.tsx";
 import * as $NotificationsPane from "./islands/NotificationsPane.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -16,7 +16,7 @@ const manifest = {
     "./routes/index.tsx": $index,
   },
   islands: {
-    "./islands/Appbar.tsx": $Appbar,
+    "./islands/AppTopbar.tsx": $AppTopbar,
     "./islands/NotificationsPane.tsx": $NotificationsPane,
   },
   baseUrl: import.meta.url,

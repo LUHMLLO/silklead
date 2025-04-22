@@ -1,8 +1,8 @@
+import AppTopbar from "#islands/AppTopbar.tsx";
+import PaneNotifications from "#islands/NotificationsPane.tsx";
 import { asset } from "$fresh/runtime.ts";
 import { type PageProps } from "$fresh/server.ts";
-import * as lilycat from "jsr:@luhmllo/lilycat@0.1.27";
-import Appbar from "#islands/Appbar.tsx";
-import PaneNotifications from "#islands/NotificationsPane.tsx";
+import * as lilycat from "jsr:@luhmllo/lilycat@0.1.30";
 
 export default function App({ Component, url }: PageProps) {
   const canonicalUrl = new URL(url.pathname, url.origin).href;
@@ -61,13 +61,15 @@ export default function App({ Component, url }: PageProps) {
         />
       </head>
       <body>
-        <main id="app">
-          <Appbar />
-          <Component />
+        <div id="app">
+          <AppTopbar />
+          <div id="app__content">
+            <Component />
+          </div>
           <x-surlayer>
             <PaneNotifications />
           </x-surlayer>
-        </main>
+        </div>
         <script type="module" src={asset("/vendors/dropdown.min.js")} />
       </body>
     </html>

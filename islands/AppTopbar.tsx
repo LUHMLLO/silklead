@@ -1,9 +1,9 @@
-import { asset } from "$fresh/runtime.ts";
-import { useEffect, useRef } from "preact/hooks";
-import { isNotificationsPaneActive } from "../lib/stores/notificationsPane.ts";
-import { handleResize } from "../lib/functions/handleResize.ts";
+import { asset } from "$fresh/runtime.ts"
+import { useEffect, useRef } from "preact/hooks"
+import { handleResize } from "#lib/functions/handleResize.ts"
+import { isNotificationsPaneActive } from "#lib/stores/notificationsPane.ts"
 
-export default function Appbar() {
+export default function AppTopbar() {
   const menuRef = useRef<HTMLElement | null>(null);
   const moreRef = useRef<HTMLElement | null>(null);
 
@@ -28,7 +28,7 @@ export default function Appbar() {
   }, []);
 
   return (
-    <nav id="appBar">
+    <nav id="app__topbar">
       <figure class="h-xl shrink-0">
         <img src={asset("/media/silkleadbysuntek.svg")} alt="logo" />
       </figure>
